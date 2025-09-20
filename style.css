@@ -94,9 +94,10 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 411px) {
     body {
         padding: 20px;
+        background-image: url(./img/r5.jpg);
     }
 
     form {
