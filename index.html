@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rgestration Form</title>
+</head>
+<body>
+    <form id="register">
+        <h1>REGISTER</h1>
+        <Label>First Name:</Label>
+        <input type="text" name="name" required>
+        <label>Last Name:</label>
+        <input type="text" name="name" required>
+        <label>National ID:</label>
+        <input type="text" name="id" placeholder="Enter 14 Digit"  pattern="\d{14}" minlength="14" maxlength="14" title="The national ID number must be 14 digits" required>
+        <Label>Date of Birth:</Label>
+        <input type="date" name="date">
+         <label for="g"> Gender:</label>
+        <input type="radio" name="g"> Male
+        <input type="radio" name="g"> Female
+        <Label>Email:</Label>
+        <input type="email" name="email" required>
+        <label>Address:</label>
+        <input type="text" name="add">
+        <label >Phone Number:</label>
+        <input type="tel" placeholder="Enter 11 Digit" name="phone"  pattern="\d{11}" maxlength="11" title="Phone number must be 11 digits"  required>
+        <label>Job title:</label>
+        <input type="text" name="title" required>
+        <Label>Organization / Universtiy:</Label>
+        <input type="text" name="uin" required>
+        <label for="re">Why do you want to attend?</label>
+        <textarea name="re" id="re"></textarea  required>
+        <label for="place">How did you hear about us?</label>
+        <select name="place" id="p1">
+              <option></option>
+            <option>Facebook</option>
+            <option>LinkedIn</option>
+            <option>TikTok</option>
+            <option>Other</option>
+        </select><br>
+        <label for="qu">Any Qusetions?</label>
+        <textarea name="qu" id="qu"></textarea>
+        <label for="ch">I agree to terms & Conditions
+            <input type="checkbox" name="ch"  required>
+        </label>
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <script src="form.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+   (function(){
+      emailjs.init("H2DaOJk9-FnPfLTK0");
+   })();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
